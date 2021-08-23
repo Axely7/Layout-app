@@ -13,7 +13,7 @@ const App = () =>  {
         <View style={styles.caja3}></View>
         <View style={styles.caja4}></View>
     </View> */}
-    <View>
+    <ScrollView>
         <View style={{flexDirection: 'row'}}>
 
             <Image 
@@ -47,10 +47,21 @@ const App = () =>  {
               ></Image>
            
           </ScrollView>
-        </View>
-        
-    </View>
 
+          <Text style={styles.titulo}>Los mejores alojamientos</Text>
+          <View>
+            <Image style={styles.mejores}
+                source={require('./assets/img/mejores1.jpg')}>
+            </Image>
+            <Image style={styles.mejores}
+                source={require('./assets/img/mejores2.jpg')}>
+            </Image>
+            <Image style={styles.mejores}
+                source={require('./assets/img/mejores3.jpg')}>
+            </Image>
+          </View>
+        </View>
+    </ScrollView>
     </>
     
   );
@@ -98,6 +109,11 @@ const styles = StyleSheet.create({
     width: 250,
     height: 300,
     marginRight: 10
+  },
+  mejores:{
+    width: '100%',
+    height: 200,
+    marginVertical: 5
   }
 });
 
